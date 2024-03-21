@@ -1,3 +1,4 @@
+```sh
 #command lines
 
 gcloud services enable container.googleapis.com
@@ -24,10 +25,14 @@ kubectl create configmap nginx-html-config --from-file=./frontend/index.html --f
 kubectl apply -f k8s/ 
 
 kubectl  get pods -o wide
+```
 
 stop:
+```sh
 gcloud container clusters resize todo-list-cluster --zone=northamerica-northeast2-a --num-nodes=0
+```
 
 start:
+```sh
 gcloud container clusters resize todo-list-cluster --zone=northamerica-northeast2-a --num-nodes=1
-
+```
